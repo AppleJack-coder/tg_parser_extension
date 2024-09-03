@@ -1,0 +1,45 @@
+{
+    "manifest_version": 3,
+    "name": "Telegram parser extension",
+    "version": "1.0",
+    "description": "Saves messages from target telegram chats",
+    "author": "AppleJack-coder",
+
+    "icons": {
+      "16": "icon.png",
+      "32": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    },
+
+    "side_panel": {
+      "default_path": "sidepanel.html"
+    },
+
+    "background": {
+      "service_worker": "service_worker.js"
+    },
+
+    "content_scripts": [
+      {
+        "js": [
+          "content_script.js"
+        ],
+        "matches": [
+          "https://web.telegram.org/k/*"
+        ]
+      }
+    ],
+
+    "action": {
+      "default_title": "Click to open panel"
+    },
+
+    "permissions": [
+      "sidePanel", 
+      "tabs",
+      "storage",
+      "unlimitedStorage",
+      "downloads"
+    ]
+}

@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Telegram parser</title>
+    <link rel="stylesheet" href="sidepanel.css">
+  </head>
+  <body>
+
+    <!-- ChatIds list + messages amount + batch_size-->
+    <section class="settings">
+      <h1>Settings</h1>
+      <div class="chatids-list">
+        <p>ChatIds list:</p>
+        <li>
+            <ul>
+              <input type="text" name="chat-id" class="chat-id" placeholder="Target chat id">
+              <button type="button" class="remove" disabled>-</button>
+              <button type="button" class="add" disabled>+</button>
+            </ul>
+        </li>
+      </div>
+      <div class="int-settings">
+        <div class="messages-amount">
+          <p>Messages amount</p>
+          <em class="small">0 = all messages from chat</em>
+          <input type="text" id="msg-amount-input" placeholder="0" autocomplete="off">
+        </div>
+        <div class="batch-size">
+          <p>Batch size</p>
+          <em class="small">this setting should boost speed performance when saving large amounts of messages</em>
+          <input type="text" id="batch-size-input" value="1" autocomplete="off">
+        </div>
+      </div>
+    </section>
+
+    <!-- Start, stop, Clear logs, Clear parsed, Download -->
+    <section class="controls">
+      <p>Controls:</p>
+      <li>
+        <ul>
+          <button id="start-btn">Start</button>
+          <button id="stop-btn" disabled>Stop</button>
+          <button id="clear-logs-btn">Clear logs</button>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <button id="clear-parsed-btn">Clear parsed</button>
+          <button id="download-btn" value='0', disabled>Download</button>
+        </ul>
+      </li>
+    </section>
+
+    <!-- Progress for every link 0/n -->
+    <section class="progress">
+      <p>Progress:</p>
+      <p id="${chatId}" class="bar">Chat ${chatId} progress: 0/0</p>
+    </section>
+
+    <!-- Logs: url  -->
+    <section class="logs">
+      <h1>Logs</h1>
+      <textarea name="logs" id="logs"></textarea>
+    </section>
+
+    <!-- Errors popup -->
+    <div class="error-popup">
+      <p>Some input fields have errors</p>
+    </div>
+  </body>
+  <script src="./sidepanel.js"></script>
+</html>
