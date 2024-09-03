@@ -1,0 +1,18 @@
+[
+    {
+        "data-mid": 0,
+        "data-peer-id": 342425425,
+        "data-timestamp": 1724472202,
+        "msg-text": "simple text",
+        "msg-webpage-preview": "base64 image",
+        "imgs-attached": [
+            "base64 image"
+        ],
+        "docs-attached-ids": [
+            ""
+        ],
+        "forwarded-from": true,
+        "forwarded-name": "",
+        "forwarded-avatar": "base64 image"
+    }
+]
