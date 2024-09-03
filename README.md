@@ -16,9 +16,9 @@ Example of parsed chat with a single message:
 [Json template file](template.json)
 
 # TODO
-[ ] 1. Add support for messages with images
-[ ] 2. Add different versions of telegram website
-[ ] 3. Change download button's behavior
-[ ] 4. Test and improve batch option
-[ ] 5. Change icon
-[ ] 6. Refactor code
+- [ ] 1. Add support for messages with images
+- [ ] 2. Add different versions of telegram website
+- [ ] 3. Change download button's behavior
+- [ ] 4. Test and improve batch option
+- [ ] 5. Change icon
+- [ ] 6. Refactor code
